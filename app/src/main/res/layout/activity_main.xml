@@ -10,16 +10,40 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.andy.foodmenu.MainActivity">
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        android:text="U 騰   P I Z Z A "
+        android:text="U 騰  P I Z Z A "
         android:textColor="@android:color/background_dark"
         android:textSize="30dp"
         android:textStyle="bold"
         android:background="@android:color/background_light"/>
+
+    <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+    <CheckBox
+        android:id="@+id/check_out"
+        android:onClick="mediator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="外帶"
+        />
+    <CheckBox
+        android:id="@+id/check_fut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="玉米濃湯"
+        android:textSize="20dp"
+
+        android:onClick="mediator"
+        />
+</LinearLayout>
     
     <LinearLayout
         android:layout_width="match_parent"
@@ -48,14 +72,14 @@
                 android:textSize="20dp" />
 
             <Button
-                android:id="@+id/button_up"
+                android:id="@+id/button_up1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="up"
+                android:onClick="mediator"
                 android:text="+" />
 
             <TextView
-                android:id="@+id/text_0"
+                android:id="@+id/text_Quantity1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
@@ -64,10 +88,10 @@
                 android:textSize="20dp" />
 
             <Button
-                android:id="@+id/button_down"
+                android:id="@+id/button_down1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="down"
+                android:onClick="mediator"
                 android:text="--" />
         </LinearLayout>
 
@@ -100,11 +124,11 @@
                     android:id="@+id/button_up2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="up2"
+                    android:onClick="mediator"
                     android:text="+" />
 
                 <TextView
-                    android:id="@+id/text_0_2"
+                    android:id="@+id/text_Quantity2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
@@ -116,7 +140,7 @@
                     android:id="@+id/button_down2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="down2"
+                    android:onClick="mediator"
                     android:text="--" />
             </LinearLayout>
 
@@ -146,30 +170,47 @@
             android:textSize="20dp" />
 
         <TextView
-            android:id="@+id/text_product1"
+            android:id="@+id/text_space1"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:text=""
             android:textColor="@android:color/background_dark"
-            android:textSize="20dp" />
+            android:textSize="15dp" />
 
         <TextView
-            android:id="@+id/text_product2"
+            android:id="@+id/text_space2"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:text=""
             android:textColor="@android:color/background_dark"
-            android:textSize="20dp" />
-
+            android:textSize="15dp" />
         <TextView
-            android:id="@+id/text_product3"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:id="@+id/text_space3_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:text=""
-            android:textSize="30dp" />
+            android:textColor="@android:color/background_dark"
+            android:textSize="10dp" />
+        <TextView
+            android:id="@+id/text_space3_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text=""
+            android:textColor="@android:color/background_dark"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/text_space4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="2"
+            android:gravity="center"
+            android:textSize="15dp" />
 
 
     </LinearLayout>
@@ -180,11 +221,11 @@
         android:layout_weight="1">
 
         <Button
-            android:id="@+id/button_ok"
+            android:id="@+id/button_checkout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:onClick="button"
+            android:onClick="mediator"
             android:text="來去 結帳 Go~!" />
     </RelativeLayout>
 </LinearLayout>
